@@ -1,0 +1,157 @@
+:root{
+    --logo-color:#B3BF5A;
+    --background:#8C593B;
+    --hover-color:#C0D904;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elementos base */
+body{
+    background: var(--background);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--logo-color);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color:white;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: var(--hover-color);
+}
+
+/* Filme principal */
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url("/img/trilhas/morro-das-andorinhas.png");
+
+    height: 400px;
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 0%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+    
+}
+
+.filme-principal .container{
+    width: 70%;
+    
+}
+
+.box-trilha{
+    height: 200px;
+    width: 100px;
+    display: block;
+}
+
+.carrossel-filmes{
+    margin-top: 5px;
+}
+
+.sections{
+    margin-top: 5px;
+}
+
+.item:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    bottom: 0;
+    transition: height 0.5s ease-out;
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+  }
+  .item:hover:before {
+    height: 100%;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .item:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    font-family: Arial;
+  }
